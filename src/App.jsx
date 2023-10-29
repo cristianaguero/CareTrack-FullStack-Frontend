@@ -12,6 +12,7 @@ import Register from './pages/Register.jsx'
 import Profile from './pages/Profile.jsx'
 import ChangePassword from './pages/ChangePassword.jsx'
 import Patients from './pages/Patients.jsx'
+import Patient from './pages/Patient.jsx'
 
 
 function App() {
@@ -36,9 +37,9 @@ function App() {
           <Route path="/admin" element={<PrivateLayout />} >
             <Route index element={<AdministratePatients />} />
             <Route path='patients' element={<Patients />} />
+            <Route path='patient/:id' element={<Patient />} />
             <Route path='profile' element={<Profile />} />
             <Route path='profile/change-password' element={<ChangePassword />} />
-          
           </Route>
 
 

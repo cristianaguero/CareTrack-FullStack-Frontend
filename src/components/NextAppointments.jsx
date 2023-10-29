@@ -1,5 +1,5 @@
 import usePatients from "../hooks/usePatients"
-import PatientCard from "./PatientCard"
+import ApointmentCard from "./AppointmentCard"
 
 function PatientsList() {
 
@@ -26,7 +26,7 @@ function PatientsList() {
                     </p>
 
                 {sortedPatients.map(patient => (
-                    <PatientCard key={patient._id} patient={patient} />
+                    <ApointmentCard key={patient._id} patient={patient} />
                 ))}
 
                 </>

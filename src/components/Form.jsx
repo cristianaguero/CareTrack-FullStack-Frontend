@@ -19,7 +19,7 @@ function Form() {
 
     const { message } = alert
 
-    const { savePatient, patient } = usePatients()
+    const { savePatient, patient, setEdition } = usePatients()
 
     useEffect(() => {
         if (patient?.name) {
@@ -84,6 +84,7 @@ function Form() {
         setId(null)
 
         setAlert({})
+        setEdition({})
     }
 
 
