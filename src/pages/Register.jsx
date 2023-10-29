@@ -3,6 +3,7 @@ import { useState } from 'react'
 import axiosClient from '../config/AxiosClient.jsx'
 import Alert from '../components/Alert.jsx'
 import Loader from '../components/Loader.jsx'
+import HeaderPublic from '../components/HeaderPublic.jsx'
 
 function Register() {
 
@@ -62,12 +63,7 @@ function Register() {
 
     return (
         <>
-            <div>
-                <h1 className="text-indigo-600 font-black text-6xl">
-                    Sign up and manage your {' '}
-                    <span className="text-black">Patients</span>
-                </h1>
-            </div>
+            <HeaderPublic text={'Sign up and manage your'} span={'Patients'} />
 
             <div className='mt-20 md:mt-5 shadow-lg px-5 py-10 rounded-xl bg-white'>
                 {message && <Alert alert={alert} />}
