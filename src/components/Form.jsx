@@ -163,7 +163,7 @@ function Form() {
                     <label
                         className="block text-gray-700 uppercase font-bold"
                         htmlFor="admissionDate">
-                        Admission Date
+                        Next Appointment
                     </label>
                     <input
                         className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"

@@ -3,11 +3,7 @@ import { Link } from "react-router-dom";
 
 function PatientCard({ patient }) {
 
-    // const { setEdition, deletePatient } = usePatients()
-
     const { name, surname, email, phone, diagnosis, _id } = patient;
-
-
 
     return (
         <div className="mx-5 mb-3 bg-white shadow-md px-5 py-10 rounded-xl">
@@ -35,13 +31,6 @@ function PatientCard({ patient }) {
                     className="py-2 px-10 bg-indigo-600 hover:bg-indigo-700 text-white font-bold uppercase rounded-lg">
                     Patient Info
                 </Link>
-                {/* <button
-                    type="button"
-                    className="py-2 px-10 bg-red-600 hover:bg-red-700 text-white font-bold uppercase rounded-lg"
-                    onClick={() => deletePatient(_id)}
-                >
-                    Delete
-                </button> */}
             </div>
         </div>
     )

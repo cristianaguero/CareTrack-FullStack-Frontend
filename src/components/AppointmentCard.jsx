@@ -1,15 +1,11 @@
 import usePatients from "../hooks/usePatients";
+import formatDate from "../helpers/formatDate.js";
 
 function Patient({ patient }) {
 
-    const { setEdition, deletePatient } = usePatients()
+    const { setEdition } = usePatients()
 
-    const { name, surname, email, phone, appointment, symptoms, _id } = patient;
-
-    const formatDate = date => {
-        const newDate = new Date(date)
-        return new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'short' }).format(newDate)
-    }
+    const { name, surname, email, phone, appointment, symptoms } = patient;
 
     return (
         <div className="mx-5 mb-3 bg-white shadow-md px-5 py-10 rounded-xl">
@@ -39,13 +35,6 @@ function Patient({ patient }) {
                     onClick={() => setEdition(patient)}
                 >
                     Edit
-                </button>
-                <button
-                    type="button"
-                    className="py-2 px-10 bg-red-600 hover:bg-red-700 text-white font-bold uppercase rounded-lg"
-                    onClick={() => deletePatient(_id)}
-                >
-                    Delete
                 </button>
             </div>
         </div>
